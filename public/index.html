@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Let's Chat</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left">
+            <!-- Heading for the chat application -->
+            <h1>Let's Chat</h1>
+
+            <!-- Button for signing in -->
+            <button id="sign-in">Sign-In</button>
+
+            <!-- Dropdown for selecting chat rooms  -->
+            <div style="display: none;">
+                <select name="rooms" id="rooms">
+                </select>
+            </div>
+
+            <!-- Button to create a new chat room -->
+            <button id="new-room" style="display: none;">New room</button>
+
+            <!-- Button to change the theme of the chat application -->
+            <button id="theme-btn">Change theme</button>
+
+            <!-- Button to delete all chat messages  -->
+            <button id="delete-chats" style="display: none;">Delete Chats</button>
+
+            <!-- Button to sign out-->
+            <button id="sign-out" style="display: none">Sign-out</button>
+
+            <!-- Input field to enter a new room name  -->
+            <input id="new-room-input" style="display: none;" type="text" placeholder="Enter room name">
+        </div>
+
+        <!-- Right section containing the chat interface  -->
+        <div class="right" style="display: none">
+            <!-- Chat box area where messages will be displayed -->
+            <div class="chat-box">
+                <ul id="chatroom"></ul>
+            </div>
+
+            <!-- Message input area -->
+            <div class="message-box">
+                <!-- Input field to type a message -->
+                <input id="user-message" type="text" placeholder="write your msg..." />
+
+                <!-- Button to send the message -->
+                <button id="send-btn">send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
