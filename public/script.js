@@ -252,7 +252,7 @@ const loadChat = () => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // Show UI elements for logged-in users
-      window.screen.width > 768
+      window.screen.width > "768px"
         ? (document.querySelector(".left").style.width = "30%")
         : (document.querySelector(".left").style.width =
             "-webkit-fill-available");
