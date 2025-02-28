@@ -252,8 +252,11 @@ const loadChat = () => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // Show UI elements for logged-in users
+      window.screen.width > 768
+        ? (document.querySelector(".left").style.width = "30%")
+        : (document.querySelector(".left").style.width =
+            "-webkit-fill-available");
       document.querySelector(".left div").style.display = "block";
-      document.querySelector(".left").style.width = "30%";
       document.querySelector(".right").style.display = "block";
       document.querySelector("#sign-out").style.display = "inline-block";
       document.querySelector("#new-room").style.display = "inline-block";
@@ -264,7 +267,7 @@ const loadChat = () => {
     } else {
       // Hide chat UI for logged-out users
       document.querySelector(".left div").style.display = "none";
-      document.querySelector(".left").style.width = "100%";
+      document.querySelector(".left").style.width = "-webkit-fill-available";
       document.querySelector("#new-room").style.display = "none";
       document.querySelector(".right").style.display = "none";
       document.querySelector("#sign-out").style.display = "none";
